@@ -1,8 +1,8 @@
 import express from 'express';
 import {
   createTodoList,
-  getsTodoList,
-  getsTodoListByUser,
+  getTodoLists,
+  getTodoListsByUser,
   getTodoList,
   updateTodoList,
   deleteTodoList,
@@ -11,8 +11,8 @@ import {
 const router = express.Router();
 
 router.post('/', createTodoList);
-router.get('/', getsTodoList);
-router.get('/user/:user_id', getsTodoListByUser);
+router.get('/', getTodoLists);
+router.get('/user/:user_id', getTodoListsByUser);
 router.get('/:id', getTodoList);
 router.put('/:id', updateTodoList);
 router.delete('/:id', deleteTodoList);
